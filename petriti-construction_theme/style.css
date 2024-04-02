@@ -1,0 +1,311 @@
+/*
+Theme Name: Petriti Construction Theme 2024
+Theme URI: https://www.petriti-ks.com/
+Author: Dielli Demjaha
+Author URI: https://www.diellidemjaha.com/
+Requires at least: 6.1
+Tested up to: 6.4
+Requires PHP: 5.6
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: petriticonstructiontheme
+*/
+
+/* Reset some default styles */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+cite,
+fieldset,
+legend,
+input,
+button,
+textarea,
+form,
+label,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1{
+    color:#222c78;
+}
+
+
+/* Header Styles */
+.site-header {
+    /* background: blue; */
+    color: #2e2e2e;
+    padding-bottom: 15px;
+    box-shadow: 6px 7px 16px -2px rgba(0,0,0,0.50);
+/* -webkit-box-shadow: 6px 7px 16px -2px rgba(0,0,0,0.22);
+-moz-box-shadow: 6px 7px 16px -2px rgba(0,0,0,0.22); */
+}
+
+.site-logo img{
+    float: left;
+    width: 500px; 
+    height:auto;
+}
+
+.site-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.site-navigation {
+    float: right;
+}
+
+.site-navigation ul {
+    list-style: none;
+    
+}
+
+.site-navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.site-navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer Styles */
+.site-footer {
+    background: #414194;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.site-footer .container {
+    text-align: center;
+}
+
+.footer-logo {
+    float: center;
+    padding: 15px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; 
+}
+
+.footer-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu {
+    margin-bottom: 20px; 
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: block;
+}
+
+.footer-social {
+    margin-top: 20px; 
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Main Content Styles */
+.site-main {
+    background-color: #fff;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.entry-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.entry-content {
+    font-size: 18px;
+}
+
+/*Button style */
+
+.download-button:hover {
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+.button {
+    display: grid;
+    padding: 8px 10px;
+    /* background-color: blue; */
+    color: #414194;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    float:right;
+}
+
+.button:hover {
+    background-color:  #414194;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding-left: 0;
+}
+.navbar-nav li {
+    list-style: none;
+    text-decoration: none!important;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-nav a:hover {
+    text-decoration: none;
+    color: #dc4114
+}
+
+.home_slider {
+    height: 700px; 
+}
+
+/* Style the images inside the slider */
+.home_slider img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.5;
+}
+
+.singlee-image {
+    max-width: 100%!important; 
+    height: auto;
+    display: block; 
+    margin: 10px 30px 20px 20px; 
+    
+    padding: 25px;
+    border-radius: 25px; 
+}
+
+.card img {
+
+    min-width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    height: auto;
+    display: block!important;
+    height: 50%!important;
+    margin: 0!important;
+    object-fit: cover;
+    width: 100%!important;
+    
+}
+
+.single-image {
+    margin-top: 50px;
+    height: 500px;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide any overflow if the image is larger */
+}
+
+.main-card{
+
+    margin: -450px 5px 150px 200px;
+    z-index: 999;
+    position: sticky;
+    /* background-color: white; */
+    /* border-radius: 10px; */
+    padding: 0px;
+    color: #292966!important;
+}
+
+.main-card p {
+    font-size: 100px;
+    font-weight:300;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-card{
+
+        margin: -450px 5px 150px 35px;
+        z-index: 999;
+        position: sticky;
+        /* background-color: white; */
+        /* border-radius: 10px; */
+        padding: 0px;
+        color: #292966!important;
+    }
+
+    .main-card p {
+        font-size: 60px;
+        font-weight: 300!important;
+    }
+
+    .site-logo img{
+        float: left;
+        width: 280px; 
+        height:auto;
+    }
+  }

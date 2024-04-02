@@ -5,9 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title(); ?></title>
-    <!-- Latest compiled and minified CSS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
     <?php wp_head(); ?>
     <style>
         .menu-item-has-children .sub-menu {
@@ -19,11 +17,11 @@
         }
 
         .menu-item-has-children .fa-chevron-down:before {
-            content: "\f078"; /* Down arrow */
+            content: "\f078"; 
         }
 
         .menu-item-has-children.active .fa-chevron-down:before {
-            content: "\f054"; /* Up arrow */
+            content: "\f054";
         }
     </style>
 </head>
@@ -57,11 +55,9 @@
             var menuItemsWithSubmenus = document.querySelectorAll('.menu-item-has-children');
 
             menuItemsWithSubmenus.forEach(function(menuItem) {
-                // Get the submenu for this menu item
                 var submenu = menuItem.querySelector('.sub-menu');
                 submenu.style.display = 'none';
 
-                // Add event listeners to show/hide the submenu
                 menuItem.addEventListener('mouseover', function() {
                     submenu.style.display = 'block';
                 });

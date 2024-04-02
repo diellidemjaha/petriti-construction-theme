@@ -1,4 +1,4 @@
-# Petriti Construction Wordpress custom-theme
+# Petriti Construction WordPress custom-theme
 
 The theme is still under construction.
 

@@ -27,8 +27,8 @@ get_header(); ?>
         <div class="card-content p-5">
 
                 <?php
-                the_title('<h1>', '</h1>'); // Display the title within <h1> tags
-                the_content(); // Display the content
+                the_title('<h1>', '</h1>');
+                the_content(); 
             }
         }
         ?>

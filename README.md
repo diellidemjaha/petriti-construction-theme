@@ -2,4 +2,4 @@
 
 The theme is still under construction.
 
-![Example Screenshot](screenshot3.jpg)
+![Example Screenshot](screenshot4.jpg)

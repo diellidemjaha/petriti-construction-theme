@@ -68,7 +68,9 @@ h1{
     color:#222c78;
 }
 
-
+a {
+    text-decoration: none;
+}
 /* Header Styles */
 .site-header {
     /* background: blue; */
@@ -308,7 +310,11 @@ h1{
     margin: 0!important;
     object-fit: cover;
     width: 100%!important;
+    transition: transform 0.3s;
     
+}
+.card img:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
 }
 
 .single-image {
@@ -329,6 +335,7 @@ h1{
     /* border-radius: 10px; */
     padding: 0px;
     color: #292966!important;
+    line-height: 1.1;
 }
 
  .main-card p {

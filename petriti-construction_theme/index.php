@@ -26,8 +26,8 @@
             autoplaySpeed: 2000,
             fade: true,
             cssEase: 'linear',
-            dots: true, 
-            arrows: false, 
+            dots: true, // Add dots for navigation
+            arrows: false, // Remove previous and next buttons
             swipe: true,
             fade: false,
             //  rtl: true,
@@ -53,8 +53,11 @@
         });
     });
 </script>
+
+<div class="site-main">
     <div class="home_slider" dir>
         <?php
+        // Query to retrieve images from the custom post type "image_gallery"
         $args = array(
             'post_type' => 'slider_gallery',
             'posts_per_page' => -1,
@@ -75,9 +78,10 @@
 
     <div class="main-card">
         <?php
+        // Query to retrieve text content from the custom post type "text_content"
         $args = array(
             'post_type' => 'text_content',
-            'posts_per_page' => 1, 
+            'posts_per_page' => 1, // Assuming you have one main text content
         );
 
         $text_posts = new WP_Query($args);
@@ -86,18 +90,20 @@
             while ($text_posts->have_posts()) {
                 $text_posts->the_post();
         ?>
-                <div class="card-body">
-                    <?php the_content(); 
+                <!-- <div class="card-body"> -->
+                    <?php the_content(); // Display text content 
                     ?>
-                </div>
+                <!-- </div> -->
         <?php
             }
         }
         ?>
     </div>
+<!-- </div> -->
+<!-- </div> -->
 <div class="container my-5">
     <div class="row mb-5">
-        <h1 class="text-center mb-5 mt-5">LAJMET</h1><br><br><br>
+        <h1 class="text-center mb-5 mt-5">LAJMET E FUNDIT</h1><br><br><br>
         <?php
         $args = array(
             'post_type' => 'post',
@@ -113,6 +119,7 @@
                     <div class="card">
                         <?php
                         if (has_post_thumbnail()) {
+                            // Display the post thumbnail (featured image)
                             the_post_thumbnail('large', ['class' => 'card-img-top']);
                         }
                         ?>
@@ -132,16 +139,21 @@
         <?php
             }
         } else {
-            echo "nuk ka poste";
+            echo "nuk ka lajme";
         }
         ?>
         <div class="text-center">
-            <a href="http://localhost/dsk/lajmet/" class="btn btn-default"><b>Shiko më shumë lajme</b></a>
+            <a href="<?php echo home_url('/lajme'); ?>" class="btn btn-default"><b>Shiko më shumë lajme</b></a>
         </div>
     </div>
+
+
+    <!-- New container for social media links and contact information -->
+    <!-- <div class="container-fluid bg-light py-5 mb-3"> -->
+
     <div class="row mb-3">
         <div class="col-md-6 col-lg-6 col-12 mb-4  d-flex justify-content-center">
-            <div class="hulumtimet">
+            <div class="container">
                 <h1 class="mb-5 text-center">RRETH NESH</h1>
                         <div class="card card-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/01.jpeg" class="card-img-top">
@@ -153,45 +165,136 @@
                             </div>
                         </div>
                         <div class="text-center m-3">
-                            <a href="http://localhost/dsk/hulumtimet/" class="btn btn-default"><b>shko tek faqja Rreth nesh</b></a>
+                            <a href="<?php echo home_url('/rreth-nesh'); ?>" class="btn btn-default"><b>shko tek faqja Rreth nesh</b></a>
                         </div>
             </div>
         </div>
+        <!-- Add your social media links here -->
 
-        <div class="col-md-6 col-lg-4 col-12 mb-4  d-flex justify-content-center">
-            <div class="raportet">
+        <!-- Add more social media links/buttons as needed -->
+        <div class="col-md-6 col-lg-3 col-12 mb-4  d-flex justify-content-center">
+            <div class="container">
             <h1 class="mb-5 text-center">KONTAKTI</h1>
+
+          
+
+
                     <div class="card card-2">
+                     
                             <img src="<?php echo get_template_directory_uri(); ?>/02.jpeg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Jemi ne gatishmeri te bashkpunojme</h5>
                             <p class="card-text">Na kontaktoni qe te leni takim me ne.</p>
                            
                             <div class="text-center">
+                           
                             </div>
                         </div>
                     </div>
                     <div class="text-center m-3">
-                        <a href="http://localhost/dsk/raportet/" class="btn btn-default"><b>Shko tek faqja KONTAKTI</b></a>
+                        <a href="<?php echo home_url('/kontakti'); ?>" class="btn btn-default"><b>Shko tek faqja KONTAKTI</b></a>
                     </div>
          
         </div>
         </div>
+        <div class="col-md-6 col-lg-3 col-12 mb-4 d-flex justify-content-center">
+            <div class="container">
+            <h1 class="mb-5 text-center">VIDEO</h1>
+
+          
+
+
+                    <div class="card card-2">
+                     
+                            <img src="<?php echo get_template_directory_uri(); ?>/03.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Videot tona</h5>
+                            <p class="card-text">Na shiqoni duke punuar.</p>
+                           
+                            <div class="text-center">
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center m-3">
+                        <a href="<?php echo home_url('/video'); ?>" class="btn btn-default"><b>Shko tek faqja VIDEO</b></a>
+                    </div>
+         
         </div>
         </div>
+        <!-- <div class="col-md-6 col-lg-4 col-12 mb-4  d-flex justify-content-center">
+            <div class="materialet">
+        
+            <h1 class="mb-5 text-center">Materialet</h1>
+
+            <?php
+            // Query for 'Materialet' custom post type and limit to one post
+            $materialet_args = array(
+                'post_type' => 'pdf_document3', // Replace with your custom post type name
+                'posts_per_page' => 1,
+            );
+            $materialet_query = new WP_Query($materialet_args);
+
+            if ($materialet_query->have_posts()) :
+                while ($materialet_query->have_posts()) :
+                    $materialet_query->the_post();
+            ?>
+
+                    <div class="card card-2">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top">
+                        <?php endif; ?>
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <p class="card-text"><?php the_field('pdf_description'); ?></p>
+                            <p class="card-text">
+                                <?php the_excerpt(); ?>
+                            </p>
+                            <div class="text-center">
+                            <?php
+                            // Output a link to the PDF file using the ACF "pdf_file" field
+                            $pdf_file = get_field('materiali_pdf');
+                            if ($pdf_file) {
+                                echo '<i class="fa fa-download pe-1" aria-hidden="true"></i><a class="download-button" href="' . esc_url($pdf_file['url']) . '" target="_blank">Shkarko PDF</a>';
+                            }
+                            ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center m-3">
+                        <a href="http://localhost/dsk/materialet/" class="btn btn-default"><b>Shiko më shumë materiale</b></a>
+                    </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            else :
+                echo 'No Materialet found.';
+            endif;
+            ?>
+        </div>
+        
+        </div> -->
+        <!-- Add your contact information here -->
+
     </div>
 
     <div class="py-5 mb-3">
+        <!-- <div class="row"> -->
             <div class="col-md-6 linqet my-5 flex align-items-center">
+                <!-- Add your social media links here -->
                 <h3>Na ndiqni ne rrjetet sociale:</h4>
+                    <!-- Add your social media icons/links here -->
                     <a href="#" class="btn btn-primary">Facebook</a>
-                    <a href="#" class="btn btn-primary">Twitter</a>
+                    <a href="#" class="btn btn-danger">Instagram</a>
+                    <!-- Add more social media links/buttons as needed -->
             </div>
             <div class="col-md-6 linqet">
+                <!-- Add your contact information here -->
                 <h3>Na kontaktoni:</h4>
-                    <p><b>Email:</b> info@downsyndromekosova.org</p>
+                    <p><b>Email:</b> petriti-construction@gmail.org</p>
                     <p><b>Phone:</b> +383 44 11 22 33</p>
             </div>
+        <!-- </div> -->
     </div>
 </div>
 
@@ -199,6 +302,9 @@
 </div>
 
 </main>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 </div>
 
 <?php get_footer(); ?>

@@ -33,6 +33,7 @@
                 <div class="card">
                     <?php
                     if (has_post_thumbnail()) {
+                        // Display the post thumbnail (featured image)
                         the_post_thumbnail('large', ['class' => 'card-img-top']);
                     }
                     ?>

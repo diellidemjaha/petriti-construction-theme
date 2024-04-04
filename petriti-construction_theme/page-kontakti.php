@@ -3,7 +3,10 @@
  * Template Name: Kontakti Page
  */
 get_header(); ?>
+<!-- Latest compiled and minified CSS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
 <!-- Slick Slider -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -11,7 +14,7 @@ get_header(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 <?php wp_head(); ?>
 <section>
-    <div class="single-image">
+    <div class="home_slider">
         <?php
         if (have_posts()) {
             while (have_posts()) {
@@ -24,8 +27,8 @@ get_header(); ?>
         <div class="card-content p-5">
 
                 <?php
-                the_title('<h1>', '</h1>');
-                the_content(); 
+                the_title('<h1 class="d-flex justify-content-center mb-4">', '</h1>'); // Display the title within <h1> tags
+                the_content(); // Display the content
             }
         }
         ?>

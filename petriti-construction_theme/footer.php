@@ -28,7 +28,7 @@
                 <div class="footer-social">
                     <?php
                     echo '<h6>KONTAKT</h6><br>';
-                    echo '<a href="mailto:contact@example.com"><i class="fas fa-envelope"></i>petriti-construction@gmail.com</a><br>'; // Add your email link
+                    echo '<a href="mailto:contact@example.com"><i class="fas fa-envelope"></i> petriti-construction@gmail.com</a><br>'; // Add your email link
                     echo '+383 44 11 22 33';
                     // echo '<a href="https://twitter.com"><i class="fab fa-twitter"></i></a>';
                     // echo '<a href="https://instagram.com"><i class="fab fa-instagram"></i></a>';

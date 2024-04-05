@@ -159,7 +159,7 @@
             <h1 class="mb-5 text-center">RRETH NESH</h1>
             <a href="<?php echo home_url('/rreth-nesh'); ?>">
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/01.jpeg" class="card-img-top">
+                    <img src="<?php echo get_template_directory_uri(); ?>/01.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Petriti C. si kompani vendore</h5>
                         <span class="card-text">
@@ -176,7 +176,7 @@
             <h1 class="mb-5 text-center">KONTAKTI</h1>
             <a href="<?php echo home_url('/kontakti'); ?>">
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/02.jpeg" class="card-img-top">
+                    <img src="<?php echo get_template_directory_uri(); ?>/02.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Jemi ne gatishmeri te bashkpunojme</h5>
                         <p class="card-text">Na kontaktoni qe te leni takim me ne.</p>
@@ -191,7 +191,7 @@
             <h1 class="mb-5 text-center">VIDEO</h1>
             <a href="<?php echo home_url('/video'); ?>">
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/03.jpeg" class="card-img-top">
+                    <img src="<?php echo get_template_directory_uri(); ?>/03.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Shiqoni videot tona</h5>
                         <p class="card-text">Kuptojeni se ku gjendemi dhe se si e bejme punen</p>
